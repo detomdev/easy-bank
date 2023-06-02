@@ -1,15 +1,126 @@
-root {
+:root {
 	/* Colors */
 	/* Primary */
 
-	--Dark-Blue: hsl(233, 26%, 24%);
-	--Lime-Green: hsl(136, 65%, 51%);
-	--Bright-Cyan: hsl(192, 70%, 51%);
+	--dark-blue: hsl(233, 26%, 24%);
+	--lime-green: hsl(136, 65%, 51%);
+	--bright-cyan: hsl(192, 70%, 51%);
 
 	/* Neutral */
 
-	--Grayish-Blue: hsl(233, 8%, 62%);
-	--Light-Grayish-Blue: hsl(220, 16%, 96%);
-	--Very-Light-Gray: hsl(0, 0%, 98%);
-	--White: hsl(0, 0%, 100%);
+	--grayish-blue: hsl(233, 8%, 62%);
+	--light-grayish-blue: hsl(220, 16%, 96%);
+	--very-light-gray: hsl(0, 0%, 98%);
+	--white: hsl(0, 0%, 100%);
+
+	--body-font: "Public Sans", sans-serif;
+	--heading-font: "Public Sans", sans-serif;
+	--h1-size: 94px;
+	--h1-height: 108px;
+	--h2-size: 50px;
+	--h2-height: 75px;
+	--h3-size: 40px;
+	--h4-size: 32px;
+	--h5-size: 28px;
+	--h6-size: 22px;
+	--subtitle-size: 17px;
+	--subtitle-height: 26px;
+	--p-size: 18px;
+	--p-height: 26px;
+	--secondary-text-size: 14px;
+	--secondary-text-height: 18px;
+	--button-size: 16px;
+
+	/* SPACING */
+	--spacing-sm: 8px;
+	--spacing-md: 16px;
+	--spacing-lg: 32px;
+	--spacing-xl: 64px;
+	--standard-width: 1440px;
+	--section-width: 1144px;
+}
+
+html,
+body {
+	width: 100%;
+	position: relative;
+	overflow-x: hidden;
+}
+
+main {
+	color: var(--dark-blue);
+	background-color: var(--white);
+	font-family: "Public Sans", sans-serif;
+	font-weight: 100;
+	font-size: var(--p-size);
+	line-height: var(--p-height);
+}
+
+section {
+	border: 1px solid blue;
+}
+
+.footer-container {
+	background-color: var(--dark-blue);
+	color: white;
+}
+
+/* Layout Styles  */
+.section-container {
+	width: 100%;
+	max-width: var(--section-width);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.one-column {
+	width: 80%;
+	text-align: left;
+	/* margin: var(--spacing-lg) auto var(--spacing-lg) auto; */
+	/*padding: 0 var(--spacing-xl) 0 var(--spacing-xl); */
+	border: 1px solid purple;
+}
+
+.card-container {
+	width: 80%;
+	display: flex;
+	text-align: left;
+	padding: 0 var(--spacing-xl) 0 var(--spacing-xl);
+	border: 1px solid green;
+}
+
+/* General styles */
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: var(--body-font);
+	font-size: var(--p-size);
+	font-weight: 300;
+	line-height: var(--p-height);
+	color: var(--Grayish-Blue);
+	height: 100vh;
+	padding: var(--spacing-xl);
+	width: 100%;
+	text-align: center;
+	background-color: lightgray;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+.icon {
+	width: 25%;
+	height: auto;
 }
