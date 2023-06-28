@@ -194,7 +194,6 @@ h3 {
 	padding: 0 0 0 calc(var(--spacing-xl) * 1.75);
 	gap: 2%;	
 	border: 1px solid orange;
-		position: relative;
 
 }
 
@@ -216,41 +215,40 @@ h3 {
 	flex-direction: column;
 	align-items: start;
 	justify-content: center;
+	position: relative;
+
 }
 
-.two-column > .col-right .image-box {
+.two-column > .col-right .background-image-box {
 	height: 462px;
 	width: 100%;
 	overflow: hidden;
-	/* background-image: url("images/bg-intro-desktop.svg");
-	background-repeat: no-repeat;
-	background-position-y: -165px;
-	background-position-x: -25px;
-	background-size: 150%;
-	border: 1px solid purple; */
+	/* border: 1px solid purple; */
 }
 
-.two-column > .col-right .image-box img {
+.two-column > .col-right .background-image-box img {
 	height: auto;
 	width: 150%;
 	object-position: top -165px right 0px;
 }
 
-.hero .image-mockups{
-	width: 50%;
-	height: 50%;  
-	position: absolute;
-	top: 0;
-	right: 0;
+.two-column > .col-right .image-mockups {
+	height: 600px;
+	width: 100%;
 	overflow: hidden;
-	border: 3px solid blue;
-	z-index: 100;
+	z-index: 2;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	/* border: 1px solid purple; */
 }
 
-.hero .image-mockups img{
-	width: 50%;
+.two-column > .col-right .image-mockups img {
 	height: auto;
+	width: 100%;
+	object-position: top -90px right -100px;
 }
+
 
 
 .card-container {
