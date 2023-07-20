@@ -24,13 +24,13 @@
 	--h4-height: 20px;
 	--h5-size: 28px;
 	--h6-size: 22px;
-	--subtitle-size: 14px;
-	--subtitle-height: 18px;
+	--subtitle-size: 12px;
+	--subtitle-height: 16px;
 	--p-size: 18px;
 	--p-height: 26px;
-	--secondary-text-size: 14px;
+	--secondary-text-size: 12px;
 	--secondary-text-height: 18px;
-	--button-size: 14px;
+	--button-size: 12px;
 
 	/* SPACING */
 	--spacing-sm: 8px;
@@ -148,14 +148,14 @@ h3 {
 .primary-button {
 	font-family: var(--body-font);
 	font-size: var(--button-size);
-	letter-spacing: 1.25px;
+	letter-spacing: 1px;
 	font-weight: 400;
 	border-radius: var(--standard-border-radius);
 	border: none;
 	background-image:
 			linear-gradient(to right, #31d300, #00d375, #00ceb2, #00c4d4, #2bb7da) ;
 	color: var(--white);
-	padding: var(--spacing-sm) var(--spacing-md);
+	padding: 14px 24px;
 	transition: all 0.15s ease;
 }
 
@@ -187,7 +187,7 @@ h3 {
 	width: 100%;
 	text-align: left;
 	margin: var(--spacing-xl) 0 var(--spacing-md) 0;
-	padding: var(--spacing-md) calc(var(--spacing-xl) * 1.75) var(--spacing-md) calc(var(--spacing-xl) * 1.75);	
+	padding: var(--spacing-md) calc(var(--spacing-xl) * 1.5) var(--spacing-md) calc(var(--spacing-xl) * 1.5);	
 	/* border: 1px solid purple;  */
 }
 
@@ -250,25 +250,17 @@ h3 {
 .two-column > .col-right .image-mockups img {
 	height: auto;
 	width: 100%;
-	object-position: top -90px right -100px;
+	object-position: top -90px right -90px;
 }
 
-/* .card-container {
-	width: 100%;
-	display: flex;
-	text-align: left;
-	padding: var(--spacing-md) calc(var(--spacing-xl) * 1.75) var(--spacing-md) calc(var(--spacing-xl) * 1.75);
-	gap: 2%;
-} */
 .card-container{
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	padding: var(--spacing-md) calc(var(--spacing-xl) * 1.75) var(--spacing-md) calc(var(--spacing-xl) * 1.75);
+	padding: var(--spacing-md) calc(var(--spacing-xl) * 1.5) var(--spacing-xl) calc(var(--spacing-xl) * 1.5);
 	gap: 10px;
 	text-align: left;
 
 }
-
 
 .gray2 .card-top img {
 	border-top-left-radius: 5px;
@@ -280,20 +272,20 @@ h3 {
 }
 
 .gray2 .card-bottom {
-	padding: var(--spacing-md) var(--spacing-md) var(--spacing-lg) var(--spacing-md);
+	padding: var(--spacing-md) var(--spacing-sm) 0 var(--spacing-md);
+	margin-right: var(--spacing-md);
 }
 
 .gray2 .card-bottom span {
 	font-size: var(--subtitle-size);
 	line-height: var(--subtitle-height);
-	padding-bottom: var(--spacing-md);
 }
 
 .gray2 .card-bottom h4 {
 	font-size: var(--h4-size);
 	font-weight: 300;
 	line-height: var(--h4-height);
-	padding: var(--spacing-md) 0 var(--spacing-md) 0;
+	padding: var(--spacing-sm) 0 var(--spacing-sm) 0;
 }
 
 .gray2 .card-bottom .secondary-text {
@@ -303,6 +295,10 @@ h3 {
 
 .gray1 {
 	background-color: var(--light-grayish-blue);
+}
+
+.gray1 .card {
+	padding-right: var(--spacing-lg);
 }
 
 .gray1 h2 {
@@ -315,7 +311,7 @@ h3 {
 }
 
 .gray1 > .one-column p {
-	width: 65%;
+	width: 66%;
 }
 
 .gray2 {
@@ -350,7 +346,7 @@ h3 {
 	grid-template-columns: 1fr 1fr;
 	width: 100%;
 	flex-direction: column;
-	border: 1px solid green;
+	/* border: 1px solid green; */
 }
 
 .list-items li{
