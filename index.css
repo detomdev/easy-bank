@@ -60,21 +60,19 @@ body {
 	font-weight: 100;
 	line-height: var(--p-height);
 	color: var(--Grayish-Blue);
-	height: 100vh;
-	padding: var(--spacing-xl);
-	text-align: center;
 	background-color: lightgray;
+	padding: 0 var(--spacing-xl);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	width: var(--standard-width);
+	justify-content: center;
+	
 }
 
-
-.article-image {
+#container{
+	margin: 0 auto;
 	width: 100%;
-	height: 146px;
-	/* object-fit: cover; */
+	height: 100vh;
 }
 
 .icon {
@@ -254,6 +252,7 @@ h3 {
 }
 
 .card-container{
+	max-width: var(--section-width);
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	padding: var(--spacing-md) calc(var(--spacing-xl) * 1.5) var(--spacing-xl) calc(var(--spacing-xl) * 1.5);
@@ -262,10 +261,24 @@ h3 {
 
 }
 
-.gray2 .card-top img {
+.article-image {
+	max-width: 100%;
+	height: auto;
+	/* object-fit: cover; */
+}
+
+.gray2 {
+	background-color: var(--very-light-gray);
+}
+
+.gray2 .card-top {
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 }
+
+/* .gray2 .card-top{
+	height: auto;
+} */
 
 .gray2 .card {
 	background-color: var(--white);
@@ -312,10 +325,6 @@ h3 {
 
 .gray1 > .one-column p {
 	width: 66%;
-}
-
-.gray2 {
-	background-color: var(--very-light-gray);
 }
 
 .articles {
