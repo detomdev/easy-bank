@@ -17,7 +17,7 @@
 	--heading-font: "Public Sans", sans-serif;
 	--h1-size: 3.4375rem;
 	--h1-height: 3.75rem;
-	--h2-size: 3.125rem;
+	--h2-size: 3.25rem;
 	--h2-height: 3.75rem;
 	--h3-size: 1.25rem;
 	--h4-size: 1rem;
@@ -36,8 +36,8 @@
 	--spacing-md: 1rem;
 	--spacing-lg: 2rem;
 	--spacing-xl: 4rem;
-	--standard-width: 1440px;
-	--section-width: 1144px;
+	--standard-width: 90rem;
+	--section-width: 71.5rem;
 
 	--standard-border-radius: 1.25rem;
 
@@ -63,7 +63,7 @@ body {
 	padding: 0 var(--spacing-xl);
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	/* align-items: center; */
 	justify-content: center;
 	
 }
@@ -84,7 +84,7 @@ h1 {
 	font-weight: 100;
 	font-size: var(--h1-size);
 	line-height: var(--h1-height);
-	padding: var(--spacing-sm) var(--spacing-lg) var(--spacing-md) 0;
+	padding: var(--spacing-sm) var(--spacing-lg) var(--spacing-lg) 0;
 }
 
 h2 {
@@ -144,9 +144,9 @@ h3 {
 	background-color: var(--very-light-gray);
 }
 
-.hero .one-column {
+/* .hero .one-column {
 	margin-top: var(--spacing-lg);
-}
+} */
 
 /* BUTTON STYLES */
 .primary-button {
@@ -171,7 +171,7 @@ h3 {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	padding-bottom: calc((--spacing-xl) * 1.5);
+	/* padding-bottom: calc((--spacing-xl) * 1.5); */
 	/* border: 1px solid red; */
 }
 
@@ -317,7 +317,7 @@ h3 {
 }
 
 .gray1 h2 {
-	padding-bottom: var(--spacing-md);
+	padding-bottom: var(--spacing-lg);
 }
 
 .gray1 .card-container .card .secondary-text {
@@ -329,7 +329,7 @@ h3 {
 	width: 66%;
 }
 
-.articles {
+.gray2 {
 	background-color: var(--very-light-gray);
 }
 
@@ -375,3 +375,50 @@ h3 {
 	flex-direction: column;
 	align-items: flex-end;
 }
+
+/* MEDIA QUERIES */
+/* @media (min-width: 375px){
+* {
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+
+.section-container {
+	padding: 0;
+}
+
+.card-container {
+	grid-template-columns: 1fr;
+	padding: 0 var(--spacing-md) 0 var(--spacing-md);
+	text-align: left;
+}
+
+.card-container .card {
+	padding: 0;
+}
+
+h1 {
+	font-size: 1.5rem;
+	padding: 0;
+	margin:0;	
+}
+
+.one-column, h2 {
+	padding: var(--spacing-md) 0 0 0;
+	line-height: 3.15rem;
+}
+
+.gray1 .one-column #single-paragraph {
+	text-align: center;
+	width: 100%;
+	border: 1 px solid red;
+} 
+
+
+.two-column {
+	grid-template-columns: 1fr;
+}
+
+
+} */
