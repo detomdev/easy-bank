@@ -27,10 +27,10 @@
 	--subtitle-height: 1rem;
 	--p-size: 1.125rem;
 	--p-height: 2rem;
-	--secondary-text-size: 1rem;
+	--secondary-text-size: .75rem;
 	--secondary-text-height: 1.75rem;
 ;
-	--button-size: .75rem;
+	--button-size: 1rem;
 
 /* SPACING */
 --spacing-sm: .5rem;
@@ -57,7 +57,7 @@
 	background-image:
 			linear-gradient(to right, #31d300, #00d375, #00ceb2, #00c4d4, #2bb7da) ;
 	color: var(--white);
-	padding: 14px 24px;
+	padding: 14px 30px;
 	transition: all 0.15s ease;
 }
 }
@@ -120,13 +120,12 @@ h3 {
 
 /* NAVBAR SECTION */
 .navbar {
-	/* min-height: 8rem; */
 	grid-area: navbar;
 	background-color: var(--white);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: var(--spacing-lg) var(--spacing-lg) var(--spacing-lg) var(--spacing-lg);
+	padding: var(--spacing-xl) var(--spacing-lg) var(--spacing-xl) var(--spacing-lg);
 }
 
 .menu {
@@ -185,20 +184,18 @@ h3 {
 }
 
 .col-left {
-	/* min-height: 18.75rem; */
 	background-color: var(--white);
 	text-align: center;
-	padding: var(--spacing-xl) 0 calc(var(--spacing-xl) * 1.5) 0;
+	padding: var(--spacing-xl) var(--spacing-xl) calc(var(--spacing-xl) * 1.5) var(--spacing-xl);
 	grid-area: col-left;
 }
 
-.col-left h1 {
+.col-left .hero-info h1 {
 	font-size: var(--h1-size-small);
-	padding: (var--spacing-xl) var(--spacing-sm) var(--spacing-lg) var(--spacing-sm);
 }
 
 .col-left #single-paragraph {
-	font-size: var(--secondary-text-size);
+	font-size: var(--p-size);
 	line-height: 1.75;
 	text-align: center;
 	padding: var(--spacing-md) var(--spacing-lg) var(--spacing-lg) var(--spacing-lg);
@@ -345,6 +342,7 @@ h3 {
 } 
 
 /* MEDIA QUERIES */
+
 @media (min-width: 700px) {
 	.container {
 		grid-template-columns: 1fr 1fr;
@@ -359,7 +357,11 @@ h3 {
 	.navbar {
 		grid-column: 1 / -1;
 		grid-row: 1;
-		padding: var(--spacing-md) calc(var(--spacing-xl) * 2) var(--spacing-md) calc(var(--spacing-xl) * 1.25);
+		padding: var(--spacing-lg) calc(var(--spacing-xl) * 1.25) var(--spacing-lg) calc(var(--spacing-xl) * 1.25);
+	}
+
+	.menu, .navbar-button {
+		display: show;
 	}
 
 	.hero {
@@ -378,12 +380,13 @@ h3 {
 		padding: var(--spacing-lg) 0 0 var(--spacing-md);
 	}
 
-	.col-left h1 {
-		font-size: var(--h2-size);
-		line-height: var(--h2-height);
+	.hero-info .col-left h1 {
+		font-size: var(--h1-size);
+		line-height: var(--h1-height);
 	}
 
 	.col-left #single-paragraph {
+		font-size: var(--p-size);
 		padding-left: 0;
 		text-align: left;
 	}
@@ -400,13 +403,13 @@ h3 {
 	}
 
 	.col-right .background-image {
-		width: 100%;
+		width: 200%;
 		height: auto;
-		object-position: top -100px right 25px;
+		object-position: top -120px right 25px;
 	}
 
 	.image-mockups {
-		width: 60%;
+		width: 55%;
 		height: auto;
 		overflow: hidden;
 		z-index: 2;
@@ -425,13 +428,17 @@ h3 {
 
 	/* WHY SECTION */
 	.why h2 {
-		padding: calc(var(--spacing-xl) * 1.25) 0 0 0;
+		padding: calc(var(--spacing-xl) * 2) 0 0 0;
+	}
+
+	.why #single-paragraph {
+		font-size: var(--p-size);
+		margin: 0 var(--spacing-xl) var(--spacing-lg) var(--spacing-xl);
 	}
 
 	.why .card-container .card .secondary-text {
-		font-size: var(--secondary-text-size);
 		line-height: var(--secondary-text-height);
-		padding: var(--spacing-lg) var(--spacing-md) var(--spacing-lg) var(--spacing-md);
+		padding: var(--spacing-lg) var(--spacing-xl) var(--spacing-lg) var(--spacing-xl);
 	}
 
 
@@ -510,11 +517,34 @@ h3 {
 
 	.footer .primary-button {
 		margin-top: 0;
+		font-size: .75rem;
 	}
 
 	.footer p {
 		font-size: .6rem;
 		line-height: var(--secondary-text-height);
+	}
+}
+
+@media (min-width: 900px){
+.navbar-button {
+		display: unset;
+	}
+/* HERO SECTION */
+	.hero {
+		padding-bottom: 0;
+	}
+	.col-left {
+		padding-right: var(--spacing-lg);
+	}
+
+	.image-mockups {
+		width: 60%;
+	}
+
+/* WHY SECTION */
+	.why h2 {
+		padding: calc(var(--spacing-xl) * 1) 0 0 0;
 	}
 }
 
@@ -533,7 +563,11 @@ h3 {
 	.navbar {
 		grid-column: 1 / -1;
 		grid-row: 1;
-		padding: var(--spacing-md) calc(var(--spacing-xl) * 2) var(--spacing-md) calc(var(--spacing-xl) * 2);
+		padding: var(--spacing-lg) calc(var(--spacing-xl) * 2.5) var(--spacing-lg) calc(var(--spacing-xl) * 2);
+	}
+
+	.menu {
+		font-size: var(--subtitle-size);
 	}
 	
 	.hero {
@@ -552,7 +586,7 @@ h3 {
 
 	.col-left h1 {
 		margin-top: var(--spacing-xl);
-		padding: var(--spacing-xl) 0 var(--spacing-lg) 0;
+		padding: var(--spacing-xl) var(--spacing-lg) var(--spacing-lg) 0;
 		font-size: var(--h1-size);
 		line-height: var(--h1-height);
 	}
@@ -560,7 +594,6 @@ h3 {
 	.col-left #single-paragraph {
 		font-size: var(--p-size);
 		line-height: var(--p-height);
-		padding-right: calc(var(--spacing-xl) * 1);
 	}
 
 	.col-right { 
@@ -601,6 +634,7 @@ h3 {
 	.why {
 		grid-column: 1 / span 4;
 		grid-row: 3;
+		padding: var(--spacing-xl) 0 0 0;
 	}
 
 	.why .icon {
@@ -618,13 +652,14 @@ h3 {
 
 	.why #single-paragraph {
 		text-align: left;
-		width: 60%;
+		width: 55%;
+		margin: 0;
 		padding: 0 0 var(--spacing-lg) calc(var(--spacing-xl) * 1.75);
 	}
 
 	.why .card-container .card .secondary-text {
-		font-size: var(--secondary-text-size);
-		line-height: var(--secondary-text-height);
+		font-size: var(--p-size);
+		line-height: var(--p-height);
 		padding: var(--spacing-md) var(--spacing-md) var(--spacing-lg) 0;
 	}
 
@@ -660,45 +695,59 @@ h3 {
 		padding-left: var(--spacing-md);
 	}
 
+	.articles .card-bottom .secondary-text {
+		font-size: var(--secondary-text-size);
+	}
+
 /* FOOTER SECTION */
 	.footer {
 		grid-column: 1 / span 4;
 		grid-row: 5;
+		padding: var(--spacing-xl) calc(var(--spacing-xl) * 1.75) var(--spacing-xl) calc(var(--spacing-xl) * 1.75);
 	}
 
 	.footer-logo {
-		display: flex;
+		display: flex; 
 		flex-direction: column;
 		align-items: start;
 	}
 
 	.footer-nav-logo {
-		width: 50%;
+		width: 100%;
+		height: auto;
 		padding-bottom: var(--spacing-md);
 	}
 
 	.footer .social-logos {
-		width: 50%;
+		width: 100%;
 		height: auto;
 		display:flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: var(--spacing-lg) 0 0 0;
+		padding: var(--spacing-lg) var(--spacing-sm) 0 0;
 	}
 
 	.footer .list-items  ul{
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		flex-direction: column;
 	}
 
-	.list-items li{
+	.footer .list-items li{
 		list-style: none;
-		font-size: 12px;
+		font-size: var(--p-size);
 		line-height: var(--p-height);
 		text-align: left;
-		padding-left: var(--spacing-md);
+		margin-bottom: 15px;
 	}
+
+	.footer .footer-button {
+		justify-self: end;
+	}
+
+	.footer .footer-button p {
+		font-size: var(--subtitle-size);
+	}
+
 }
 
 
